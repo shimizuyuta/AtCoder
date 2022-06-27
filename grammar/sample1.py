@@ -13,3 +13,41 @@ print(id(num1))
 
 print('num1',num1)
 print('num2',num2)
+
+#アンパック代入
+
+data = [2,34,4,8]
+m,n,*o = data
+*a,b,c = data
+print(a)
+
+#[]
+print(o)
+data2 = [1,2]
+a2,b2,*c2 = data2
+print(c2)
+
+#リストの先頭・末尾のみ
+a,*_,b = data
+print('a:',a,'b:',b)
+
+#リスト指定（割り当て無し）
+a,_,b,_ = data
+print('a:',a,'b:',b)
+
+#入れ子
+data3 = [2,3,[44,55,66]]
+x,y,(x1,y1,z1) = data3
+print('x1:',x1)
+
+#メモリの比較と値の比較
+data4 = [1,2]
+data5 = [1,2]
+#値のみ比較:true
+print(data4==data5)
+#メモリを比較:false
+print(data4 is data5)
+
+#比較演算子
+x=15
+print(9<x<30)
