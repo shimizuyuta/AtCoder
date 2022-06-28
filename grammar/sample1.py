@@ -51,3 +51,42 @@ print(data4 is data5)
 #比較演算子
 x=15
 print(9<x<30)
+
+#for は文字列を1文字単位で扱う
+for value in "hello world":
+  print("value:",value)
+
+#range1~5
+for l in range(1,6):
+  print("l:",l)
+
+#range+2づつ
+for l in range(1,6,2):
+  print("l:",l)
+
+#rangeをリスト化
+lis = list(range(1,10,3))
+print("lis:",lis)
+
+#イテレーターとは
+# 連続データ(リスト・集合・タプル)を操作するオブジェクト
+# EX) 100GBのデータを読み取るとき1度に全てを読み込むとメモリがパンパン
+#     →1行ずつ読み込んで、読み込んだデータをその都度破棄する
+
+#リスト内包
+data = [3,4,5,6]
+data2 = [i * 2 for i in data]
+print('data:',data)
+
+data = [3,4,5,6]
+data2 = [i * 2 for i in data if i > 4]
+print('data2:',data2)
+
+
+
+#九九
+for i in range(1,10):
+  for j in range(1,10):
+    print(i*j,end=" ")
+  print()
+
